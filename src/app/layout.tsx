@@ -6,7 +6,7 @@ import Nav from '@/components/Nav/nav';
 import './globals.css';
 import styles from './layout.module.css';
 import React, { Suspense } from 'react';
-import GoogleAnalytics from "@/hooks/GoogleAnalytics";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 export const metadata = {
   metadataBase: new URL(process.env.BASE_URL || 'http://localhost:3000'),
@@ -32,9 +32,6 @@ export default async function RootLayout({ children }: Props) {
   });
   return (
     <html lang="ja">
-      <Suspense fallback={<></>}>
-        <GoogleAnalytics />
-      </Suspense>
       <body>
         <Suspense>
           <Header />
@@ -43,6 +40,7 @@ export default async function RootLayout({ children }: Props) {
           <Footer />
         </Suspense>
       </body>
+      <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID ?? ""} />
     </html>
   );
 }
