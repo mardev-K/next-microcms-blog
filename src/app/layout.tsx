@@ -6,6 +6,7 @@ import Nav from '@/components/Nav/nav';
 import './globals.css';
 import styles from './layout.module.css';
 import React, { Suspense } from 'react';
+import GoogleAnalytics from "@/hooks/GoogleAnalytics";
 
 export const metadata = {
   metadataBase: new URL(process.env.BASE_URL || 'http://localhost:3000'),
@@ -33,6 +34,7 @@ export default async function RootLayout({ children }: Props) {
     <html lang="ja">
       <body>
         <Suspense>
+          <GoogleAnalytics />
           <Header />
           <Nav tags={tags.contents} />
           <main className={styles.main}>{children}</main>
