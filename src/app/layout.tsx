@@ -32,9 +32,11 @@ export default async function RootLayout({ children }: Props) {
   });
   return (
     <html lang="ja">
+      <Suspense fallback={<></>}>
+        <GoogleAnalytics />
+      </Suspense>
       <body>
         <Suspense>
-          <GoogleAnalytics />
           <Header />
           <Nav tags={tags.contents} />
           <main className={styles.main}>{children}</main>
