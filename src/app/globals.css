@@ -1,0 +1,49 @@
+:root {
+  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono', 'Roboto Mono',
+    'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro', 'Fira Mono', 'Droid Sans Mono',
+    'Courier New', monospace;
+  --color-text-main: #ffffff;
+  --color-text-sub: #bbbbbb;
+  --color-bg-main: #000000;
+  --color-bg-sub: #333333;
+  --color-bg-code: #1e1e1e;
+  --color-border-dark: #555555;
+  --color-border: #666666;
+  --color-border-light: #777777;
+  --color-current: #888888;
+  --border-radius: 4px;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', YuGothic, 'ヒラギノ角ゴ ProN W3',
+    Hiragino Kaku Gothic ProN, Arial, 'メイリオ', Meiryo, sans-serif;
+  color: var(--color-text-main);
+  line-height: 1.8;
+  background-color: var(--color-bg-main);
+}
+
+code {
+  font-family: menlo, inconsolata, monospace;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ol,
+ul {
+  list-style: none;
+}
