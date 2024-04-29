@@ -10,11 +10,11 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 
 export const metadata = {
   metadataBase: new URL(process.env.BASE_URL || 'http://localhost:3000'),
-  title: 'Blog',
-  description: 'A simple blog presented by microCMS',
+  title: 'Mardev',
+  description: "Hi! It's tech blog of a Japanese engineer living in Cebu:)",
   openGraph: {
-    title: 'Blog',
-    description: 'A simple blog presented by microCMS',
+    title: 'Mardev',
+    description: "Hi! It's tech blog of a Japanese engineer living in Cebu:)",
     images: '/ogp.png',
   },
   alternates: {

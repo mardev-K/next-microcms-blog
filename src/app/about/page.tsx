@@ -9,8 +9,8 @@ export default async function About() {
 
     const profile = {
         name: "mardev",
-        role: "ソフトウェアエンジニア",
-        description: "業務では主にバックエンドに携わっています。でも実はフロントエンドの方が大好きです。0から1を生み出せるエンジニアになるため勉強中です。"
+        role: "Webアプリケーション開発してます。",
+        description: "セブに住んでます。犬好きです。"
     };
 
     return (
