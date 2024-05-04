@@ -41,7 +41,7 @@ TypeScript      : 5.4.5
 
   ※必要に応じて、パッケージのインストールを行ってください。
 
-3. `.env.local`ファイルを作成し、MicroCMSのAPIキーとドメイン、ベースＵＲＬを設定します。
+3. `.env.local`ファイルを作成し、MicroCMSのAPIキーとドメイン、ベースURLを設定します。
 ```
 MICROCMS_API_KEY=xxxxxxxxxx
 MICROCMS_SERVICE_DOMAIN=xxxxxxxxxx
