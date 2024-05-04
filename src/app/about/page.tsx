@@ -5,7 +5,7 @@ import { SiZenn } from "react-icons/si";
 import { FaGithub } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
-export default async function About() {
+export default function About() {
 
     const profile = {
         name: "mardev",

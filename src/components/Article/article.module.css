@@ -45,8 +45,8 @@
 .content>h1 {
   font-size: 2rem;
   font-weight: bold;
-  border-bottom: 1px solid var(--color-border);
-  margin: 2.8rem 0 1rem;
+  padding: 0.5em;
+  border-left: solid 5px #ffaf58;
 }
 
 .content>h2 {
@@ -125,7 +125,31 @@
 }
 
 .content a {
-  text-decoration: underline;
+  position: relative;
+  display: inline-block;
+  transition: .3s;
+  padding: 0 0 0 20px;
+  background: url(../../../public/link-icon.svg) no-repeat center left;
+}
+
+.content a::after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  content: '';
+  width: 0;
+  height: 2px;
+  background-color: #ffffff;
+  transition: .3s;
+  transform: translateX(-50%);
+}
+
+.content a:hover {
+  color: #00e1ff;
+}
+
+.content a:hover::after {
+  width: 100%;
 }
 
 .content>figure {
@@ -176,28 +200,21 @@
   padding: 1rem;
 }
 
-.content>p {
-  >span.tcr {
-    color: red;
-  }
+/* custom classes*/
+.content>p span[class="tcr"] {
+  color: red;
 }
 
-.content>p {
-  >span.tcb {
-    color: blue;
-  }
+.content>p span[class="tcb"] {
+  color: rgb(42, 167, 250);
 }
 
-.content>p {
-  >span.tcy {
-    color: yellow;
-  }
+.content>p span[class="tcy"] {
+  color: yellow;
 }
 
-.content>p {
-  >span.tcg {
-    color: green;
-  }
+.content>p span[class="tcg"] {
+  color: rgb(65, 235, 32);
 }
 
 @media (max-width: 640px) {

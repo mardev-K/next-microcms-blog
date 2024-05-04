@@ -2,6 +2,8 @@ import { getList } from '@/libs/microcms';
 import { LIMIT } from '@/constants/constants';
 import Pagination from '@/components/Pagination/pagination';
 import ArticleList from '@/components/ArticleList/articleList';
+import { SiVirustotal } from "react-icons/si";
+import styles from './page.module.css';
 
 type Props = {
   params: {
@@ -17,8 +19,14 @@ export default async function Page({ params }: Props) {
     limit: LIMIT,
     offset: LIMIT * (current - 1),
   });
+  const countData = data.totalCount;
+
   return (
     <>
+      <div className={styles.countData}>
+        <SiVirustotal />
+        <p className={styles.total}>{countData} posts so far. Stay tuned for more!</p>
+      </div>
       <ArticleList articles={data.contents} />
       <Pagination totalCount={data.totalCount} current={current} />
     </>

@@ -5,10 +5,26 @@
 .link {
   display: flex;
   gap: 40px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .13);
+  transition: all 0.3s ease 0s;
+  border-radius: 10px;
+  padding: 5px 5px 5px 5px;
+}
+
+.link:hover {
+  box-shadow: 0 4px 20px rgb(192, 192, 192, 0.25);
+  transform: translateY(-5px);
+}
+
+.imageArea {
+  display: flex;
+  flex-basis: 20%;
+  justify-content: center;
+  align-items: center;
 }
 
 .image {
-  width: 150px;
+  width: 100px;
   height: auto;
 }
 

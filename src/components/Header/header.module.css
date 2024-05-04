@@ -20,6 +20,30 @@
   line-height: 1rem;
 }
 
+.about {
+  transition: color .5s;
+}
+
+.about:hover {
+  color: aqua;
+}
+
+.blog {
+  transition: color .5s;
+}
+
+.blog:hover {
+  color: aqua;
+}
+
+.search {
+  transition: color .5s;
+}
+
+.search:hover {
+  color: aqua;
+}
+
 @media (max-width: 640px) {
   .header {
     display: flex;

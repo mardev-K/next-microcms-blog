@@ -35,7 +35,6 @@ export default async function RootLayout({ children }: Props) {
       <body>
         <Suspense>
           <Header />
-          <Nav tags={tags.contents} />
           <main className={styles.main}>{children}</main>
           <Footer />
         </Suspense>
