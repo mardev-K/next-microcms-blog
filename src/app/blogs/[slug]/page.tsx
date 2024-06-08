@@ -17,6 +17,9 @@ export async function generateMetadata({ params, searchParams }: Props): Promise
   const data = await getDetail(params.slug, {
     draftKey: searchParams.dk,
   });
+  const id = params.slug
+  const url = "https://mardev-rho.vercel.app/"
+  const ogUrl = new URL(`${url}/api/og?id=${id}`)
 
   return {
     title: data.title,
@@ -24,7 +27,16 @@ export async function generateMetadata({ params, searchParams }: Props): Promise
     openGraph: {
       title: data.title,
       description: data.description,
-      images: [data?.thumbnail?.url || ''],
+      type: 'article',
+      url: `${url}/blogs/${id}`,
+      images: [
+        {
+          url: ogUrl.toString(),
+          width: 1200,
+          height: 630,
+          alt: data.title,
+        },
+      ],
     },
   };
 }
