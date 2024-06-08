@@ -20,6 +20,9 @@ export const metadata = {
   alternates: {
     canonical: '/',
   },
+  verification: {
+		google: process.env.GOOGLE_CONSOLE_URL_PREFEX,
+		},
 };
 
 type Props = {
